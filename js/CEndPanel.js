@@ -85,7 +85,7 @@ function CEndPanel(oSpriteBg){
 		
     };
 	
-	function share() {
+	/*function share() {
 	FB.ui(
 	  {
 	   method: 'feed', //Método para postar no Mural
@@ -98,7 +98,7 @@ function CEndPanel(oSpriteBg){
 	  function(response) {
 		 console.log(response); //Callback da função.
 	  }
-	);
+	);*/
 
     
     this.show = function(iScore){
