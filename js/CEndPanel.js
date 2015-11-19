@@ -70,14 +70,17 @@ function CEndPanel(oSpriteBg){
         _oGroup.on("mousedown",this._onExit);
 		var r = confirm("Deseja compartilhar a sua pontuação no Facebook?");
 		if (r == true) {
-			/*FB.ui({
+			FB.ui({
 				  method: 'share_open_graph',
 				  action_type: 'og.likes',
+				  name: 'Eu fiz ' +iScore+' pontos no Drive Your Car',
+	   			  caption: 'Drive Your Car',
+	   			  description: 'Eu fiz ' +iScore+' pontos no Drive Your Car, jogue você também',
 				  action_properties: JSON.stringify({
 					  object:'https://developers.facebook.com/docs/',
 				  })
-				}, function(response){});*/
-				share();
+				}, function(response){});
+			
 		} else {
 			location.reload();
 		}
