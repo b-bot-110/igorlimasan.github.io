@@ -73,9 +73,6 @@ function CEndPanel(oSpriteBg){
 			FB.ui({
 				  method: 'share_open_graph',
 				  action_type: 'og.likes',
-				  name: 'Eu fiz ' +iScore+' pontos no Drive Your Car',
-	   			  caption: 'Drive Your Car',
-	   			  description: 'Eu fiz ' +iScore+' pontos no Drive Your Car, jogue você também',
 				  action_properties: JSON.stringify({
 					  object:'https://developers.facebook.com/docs/',
 				  })
