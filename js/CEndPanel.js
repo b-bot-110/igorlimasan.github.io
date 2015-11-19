@@ -70,13 +70,14 @@ function CEndPanel(oSpriteBg){
         _oGroup.on("mousedown",this._onExit);
 		var r = confirm("Deseja compartilhar a sua pontuação no Facebook?");
 		if (r == true) {
-			FB.ui({
+			/*FB.ui({
 				  method: 'share_open_graph',
 				  action_type: 'og.likes',
 				  action_properties: JSON.stringify({
 					  object:'https://developers.facebook.com/docs/',
 				  })
-				}, function(response){});
+				}, function(response){});*/
+				share();
 		} else {
 			location.reload();
 		}
@@ -84,7 +85,7 @@ function CEndPanel(oSpriteBg){
 		
     };
 	
-	/*function share() {
+	function share() {
 	FB.ui(
 	  {
 	   method: 'feed', //Método para postar no Mural
@@ -98,7 +99,7 @@ function CEndPanel(oSpriteBg){
 		 console.log(response); //Callback da função.
 	  }
 	);
-}*/
+
     
     this.show = function(iScore){
         _oMsgTextBack.text = TEXT_GAME_OVER;
