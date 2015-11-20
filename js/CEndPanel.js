@@ -68,31 +68,30 @@ function CEndPanel(oSpriteBg){
     
     this._initListener = function(){
         _oGroup.on("mousedown",this._onExit);
-		var r = confirm("Deseja compartilhar a sua pontuação no Facebook?");
+ 
+		var r  = confirm("Deseja compartilhar a sua pontuação no Facebook?");
 		if (r == true) {
-			/*FB.ui({
+			FB.ui({
 				  method: 'share_open_graph',
 				  action_type: 'og.likes',
 				  action_properties: JSON.stringify({
 					  object:'https://developers.facebook.com/docs/',
 				  })
-				}, function(response){});*/
-				var params = {};
+				}, function(response){});
+				/*var params = {};
 				params['message'] = 'I Played Drive your car';
 				params['name'] = 'Drive your car';
 				params['description'] = 'Eu fiz ' +iScore+' pontos no Drive Your Car, jogue você também';
 				params['link'] = 'igorlimasan.github.io';
 				params['picture'] = 'https://github.com/igorlimasan/igorlimasan.github.io/blob/master/sprites/bg_menu.jpg';
 				params['caption'] = 'Drive your car';
-				  
 				FB.api('/me/feed', 'post', params, function(response) {
 				  if (!response || response.error) {
 				    alert('Error occured');
 				  } else {
 				    alert('Publicado');
 				  }
-				});
-			
+				});*/
 		} else {
 			location.reload();
 		}
