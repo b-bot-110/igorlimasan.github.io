@@ -70,16 +70,26 @@ function CEndPanel(oSpriteBg){
         _oGroup.on("mousedown",this._onExit);
 		var r = confirm("Deseja compartilhar a sua pontuação no Facebook?");
 		if (r == true) {
-			FB.ui({
+			/*FB.ui({
 				  method: 'share_open_graph',
 				  action_type: 'og.likes',
-				  name: 'Eu fiz ' +iScore+' pontos no Drive Your Car',
-	   			  caption: 'Drive Your Car',
-				  description: 'Eu fiz ' +iScore+' pontos no Drive Your Car, jogue você também'
-				  /*action_properties: JSON.stringify({
+				  action_properties: JSON.stringify({
 					  object:'https://developers.facebook.com/docs/',
-				  })*/
-				}, function(response){});
+				  })
+				}, function(response){});*/
+				FB.ui(
+					  {
+					   method: 'feed', //Método para postar no Mural
+					   name: 'Eu fiz ' +iScore+' pontos no Drive Your Car',
+					   caption: 'Drive Your Car',
+					   description: 'Eu fiz ' +iScore+' pontos no Drive Your Car, jogue você também',
+					   link: 'http://google.com/', //Link a ser compartilhado
+					   picture: 'http://google.com/logo.png' //Imagem do Share
+					  },
+					  function(response) {
+						 console.log(response); //Callback da função.
+					  }
+					);
 			
 		} else {
 			location.reload();
