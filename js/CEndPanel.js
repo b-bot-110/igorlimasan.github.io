@@ -77,19 +77,21 @@ function CEndPanel(oSpriteBg){
 					  object:'https://developers.facebook.com/docs/',
 				  })
 				}, function(response){});*/
-				FB.ui(
-					  {
-					   method: 'feed', //Método para postar no Mural
-					   name: 'Eu fiz ' +iScore+' pontos no Drive Your Car',
-					   caption: 'Drive Your Car',
-					   description: 'Eu fiz ' +iScore+' pontos no Drive Your Car, jogue você também',
-					   link: 'http://google.com/', //Link a ser compartilhado
-					   picture: 'http://google.com/logo.png' //Imagem do Share
-					  },
-					  function(response) {
-						 console.log(response); //Callback da função.
-					  }
-					);
+				var params = {};
+				params['message'] = 'I Played Drive your car';
+				params['name'] = 'Drive your car';
+				params['description'] = 'Eu fiz ' +iScore+' pontos no Drive Your Car, jogue você também';
+				params['link'] = 'igorlimasan.github.io';
+				params['picture'] = 'https://github.com/igorlimasan/igorlimasan.github.io/blob/master/sprites/bg_menu.jpg';
+				params['caption'] = 'Drive your car';
+				  
+				FB.api('/me/feed', 'post', params, function(response) {
+				  if (!response || response.error) {
+				    alert('Error occured');
+				  } else {
+				    alert('Publicado');
+				  }
+				});
 			
 		} else {
 			location.reload();
