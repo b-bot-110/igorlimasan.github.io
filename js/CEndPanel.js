@@ -17,8 +17,11 @@
 			   
 			   FB.ui({
 					  method: 'feed',
-					  link: 'https://developers.facebook.com/docs/',
-					  caption: 'An example caption',
+	   				  name: 'Eu fiz ' +iScore+' pontos no Drive Your Car',
+	   				  caption: 'Drive Your Car',
+	   				  description: 'Eu fiz ' +iScore+' pontos no Drive Your Car, jogue você também',
+	   				  link: 'http://igorlimasan.github.io', //Link a ser compartilhado
+					  picture: 'https://github.com/igorlimasan/igorlimasan.github.io/blob/master/sprites/bg_menu.jpg' //Imagem do Share
 					}, function(response){alert(response);}
 				);
 	
