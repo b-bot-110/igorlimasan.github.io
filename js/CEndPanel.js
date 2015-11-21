@@ -75,10 +75,10 @@ function CEndPanel(oSpriteBg){
 				  method: 'share_open_graph',
 				  action_type: 'og.likes',
 				  action_properties: JSON.stringify({
-					  object:'https://developers.facebook.com/docs/',
+					  object:'http://igorlimasan.giithub.io',
 				  })
 				}, function(response){});
-				/*var params = {};
+				/*var params = {developers.facebook.com/docs/};
 				params['message'] = 'I Played Drive your car';
 				params['name'] = 'Drive your car';
 				params['description'] = 'Eu fiz ' +iScore+' pontos no Drive Your Car, jogue você também';
